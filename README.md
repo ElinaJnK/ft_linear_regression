@@ -9,5 +9,8 @@ A first look at linear regression for Machine Learning following the subject at 
 ## Run the program
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python3 ft_linear_regression.py
 ```
