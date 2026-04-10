@@ -12,5 +12,6 @@ A first look at linear regression for Machine Learning following the subject at 
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python3 ft_linear_regression.py
+python3 predict.py
+python3 train.py
 ```

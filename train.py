@@ -49,11 +49,16 @@ class LinearRegression:
                 break
             prev_loss = loss
             
+        mae = np.mean(np.abs(error))
+        print(f"mae (how much the price predictions are off): {mae * (y_max - y_min)}")
         # denormalization of theta0 and theta1
         old_theta = self.theta1
         self.theta1 = self.theta1 * (y_max - y_min) / (x_max - x_min)
         self.theta0 = y_min + (y_max - y_min) * (self.theta0 - old_theta * x_min / (x_max - x_min))
         return
+    
+    def precision(self, prediction, real):
+        pass
 
     def makeGraph(self, csv_path):
         df = pd.read_csv(csv_path)
